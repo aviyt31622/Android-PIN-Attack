@@ -1,8 +1,8 @@
-# 🔓📱 Android PIN Bruteforce
+# 🔓📱 Android PIN Attack
 
 Unlock an Android phone (or device) by bruteforcing the lockscreen PIN.
 
-Turn your Kali Nethunter phone into a bruteforce PIN cracker for Android devices! 
+Turn your Kali Nethunter phone into a Attack PIN cracker for Android devices! 
 
 ## 📱 How it works
 
@@ -50,7 +50,7 @@ TBC
 
 If you installed the script to /sdcard/, you can execute it with the following command.
 
-```bash ./android-pin-bruteforce``` 
+```bash ./android-pin-Attack``` 
 
 Note that Android mounts /sdcard with the noexec flag. You can verify this with ```mount```.
 
@@ -59,8 +59,8 @@ Note that Android mounts /sdcard with the noexec flag. You can verify this with 
 
 ```
 
-Android-PIN-Bruteforce (0.1) is used to unlock an Android phone (or device) by bruteforcing the lockscreen PIN.
-  Find more information at: https://github.com/urbanadventurer/Android-PIN-Bruteforce
+Android-PIN-Attack (0.1) is used to unlock an Android phone (or device) by bruteforcing the lockscreen PIN.
+  Find more information at: https://github.com/urbanadventurer/Android-PIN-Attack
 
 Commands:
   crack                Begin cracking PINs
@@ -81,7 +81,7 @@ Options:
   -v, --verbose        Output verbose logs
 
 Usage:
-  android-pin-bruteforce <command> [options]
+  android-pin-Attack <command> [options]
 ```
 
 
@@ -89,10 +89,10 @@ Usage:
 
 This has been successfully tested with various phones including the Samsung S5, S7, Motorola G4 Plus and G5 Plus.
 
-It can unlock Android versions 6.0.1 through to 10.0. The ability to perform a bruteforce attack doesn't depend on the Android version in use. It depends on how the device vendor developed their own lockscreen.
+It can unlock Android versions 6.0.1 through to 10.0. The ability to perform a Attack attack doesn't depend on the Android version in use. It depends on how the device vendor developed their own lockscreen.
 
 Check the Phone Database for more details
-https://github.com/urbanadventurer/Android-PIN-Bruteforce/wiki/Phone-Database
+https://github.com/urbanadventurer/Android-PIN-Attack/wiki/Phone-Database
 
 ## 🎳 PIN Lists
 
@@ -103,10 +103,10 @@ Optimised PIN lists are used by default unless the user selects a custom PIN lis
 Use the `--length` commandline option.
 
 Use this command to crack a 3 digit PIN, 
-`./android-pin-bruteforce crack --length 3`
+`./android-pin-Attack crack --length 3`
 
 Use this command to crack a 6 digit PIN
-`./android-pin-bruteforce crack --length 6`
+`./android-pin-Attack crack --length 6`
 
 ### Where did the optimised PIN lists come from?
 
@@ -128,7 +128,7 @@ and was used in their Defcon talk, [Electromechanical PIN Cracking with Robotic 
 
 Masks use regular expressions with the standard grep extended format.
 
-`./android-pin-bruteforce crack --mask "...[45]" --dry-run`
+`./android-pin-Attack crack --mask "...[45]" --dry-run`
 
 - To try all years from 1900 to 1999, use a mask of `19..`
 - To try PINs that have a 1 in the first digit, and a 1 in the last digit, use a mask of `1..1`
@@ -142,7 +142,7 @@ To find out what keys your phone needs, plug a keyboard into the phone and try o
 Load a different configuration file, with the `--config FILE` commandline parameter.
 
 Example:
-`./android-pin-bruteforce --config ./config.samsung.s5 crack`
+`./android-pin-Attack --config ./config.samsung.s5 crack`
 
 You can also edit the `config` file by customising the timing and keys sent.
 
@@ -182,9 +182,9 @@ KEYS_STAY_AWAKE_DURING_COOLDOWN="enter"
 ## SEND_KEYS_STAY_AWAKE_DURING_COOLDOWN_EVERY_N_SECONDS how often the keys are sent, in seconds
 SEND_KEYS_STAY_AWAKE_DURING_COOLDOWN_EVERY_N_SECONDS=5
 
-## DELAY_BEFORE_STARTING is the period of time in seconds to wait before the bruteforce begins
+## DELAY_BEFORE_STARTING is the period of time in seconds to wait before the Attack begins
 DELAY_BEFORE_STARTING=2
-## KEYS_BEFORE_STARTING configures the keys that are sent before the bruteforce begins
+## KEYS_BEFORE_STARTING configures the keys that are sent before the Attack begins
 KEYS_BEFORE_STARTING="enter"
 ```
 
@@ -341,7 +341,7 @@ If your phone runs out of power too soon, follow these steps:
 
 Use the command `diag` display diagnostic information.
 
-```bash ./android-pin-bruteforce diag```
+```bash ./android-pin-Attack diag```
 
 If you receive this message when the USB cable is plugged in then try taking the battery out of the locked Android phone and power cycling it.
 
@@ -381,12 +381,12 @@ Try this command in a shell on the NetHunter phone:
 - [DONE] Works
 - [DONE] Detects USB HID failures
 - [DONE] Improve Usage and commandline options/config files
-- [DONE] Add bruteforce for n digit PINs
+- [DONE] Add Attack for n digit PINs
 - [DONE] Mask for known digits
 - [DONE] Crack PIN list in reverse (to find which recent PIN unlocked the device)
 - [DONE] Implement configurable lockscreen prompt
 - [DONE] Implement cooldown change after 10 attempts
-- [WORKING] Find/test more devices to bruteforce
+- [WORKING] Find/test more devices to Attack
 - Add progress bar
 - Add ETA
 - ASCII art
@@ -403,7 +403,7 @@ Please make sure to update tests as appropriate.
 
 ## 😎 Authors and acknowledgment
 
-Developed by Andrew Horton (@urbanadventurer).
+Developed by AVIYT (@AVIHACKERYT).
 
 👏 The following people have been very helpful:
 
@@ -434,18 +434,31 @@ Designed by Andrew Horton and gratefully using these free vector packs:
 
 I've been asked what makes this project unique when there are other open-source Android PIN cracking projects.
 
-Android-PIN-Bruteforce is unique because it cracks the PIN on Android phones from a NetHunter phone and it doesn't need the locked phone to be pre-hacked.
+Android-PIN-Attack is unique because it cracks the PIN on Android phones from a NetHunter phone and it doesn't need the locked phone to be pre-hacked.
 
 It works:
 - Without having to buy special hardware, such as a Rubber Ducky, Celebrite, or XPIN Clip.
 - Without ADB or root access (the phone doesn't have to be pre-hacked).
 
-| Project                                               | ADB/USB Debugging  | Requires root | Requires $ hardware | Commercial  |
-------------------------------------------------------- | ------------------ | ------------- | ------------------- | ----------- | 
-| ⭐ Android-PIN-Bruteforce                             | No                 | No            | Nethunter phone     | No          | 
-| github.com/PentesterES/AndroidPINCrack                | Yes                | Yes           | No                  | No          |
-| github.com/ByteRockstar1996/Cracking-Android-Pin-Lock | Yes                | Yes           | No                  | No          |
-| github.com/sch3m4/androidpatternlock                  | Yes                | Yes           | No                  | No          |
-| github.com/georgenicolaou/androidlockcracker          | Yes                | Yes           | No                  | No          |
-| github.com/MGF15/P-Decode                             | Yes                | Yes           | No                  | No          |
-| github.com/BitesFor/ABL                  
+
+Some of these projects/products are really awesome but they achieve a different goal to Android-PIN-Attack.
+
+If a project requires a gestures.key or password.key, I've listed it as requiring root.
+If a project requires a custom bootloader, I've listed that as requiring both ADB and root.
+If you would like your project listed in this table then please open a new issue.
+There are links to each of these projects in the 📚 Related Projects & Futher Reading section.
+
+### 😭 Regular phone users
+
+- Try the top 20 PINs from the [DataGenetics PIN analysis](https://datagenetics.com/blog/september32012/index.html) that apparently unlocks 26.83% of phones.
+- Use an SMS lock-screen bypass app (requires app install before phone is locked)
+- Use Samsung Find My Mobile (requires you set it up before phone is locked)
+- Crash the Lock Screen UI (Android 5.0 and 5.1)
+- Use the Google Forgot pattern, Forgot PIN, or Forgot password (Android 4.4 KitKat and earlier)
+- Factory Reset (you lose all your data 😭)
+
+### 🤖 Users who have already replaced their Android ROM
+
+If the phone has already been rooted, has USB debugging enabled, or has adb enabled.
+
+- Flash the `Pattern Passwor
